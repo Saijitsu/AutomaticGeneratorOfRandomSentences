@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/generator.css" rel="stylesheet">
+    <title>Générateur de citation(s)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container has-text-centered is-fullwidth">
+        <header>
+            <div class="columns">
+                <div class="column">
+                    <h1 class="titre">
+                        <i class="fab fa-pied-piper-alt"></i> Générateur de citation(s)</h1>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <form>
+                            <div class="control">
+                                <label for="typeCitation">Choix du type de citation(s)
+                                    <i class="far fa-grin-squint-tears"></i> &amp;
+                                    <i class="far fa-sad-tear"></i> :</label>
+                                <select name="type" id="type" class="select">
+                                    <option value="comique" selected>Citation(s) comique(s) </option>
+                                    <option value="triste">Citations(s) triste(s)</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="column is-two-fifths">
+
+                        <form>
+                            <div class="control">
+                                <label for="numberCitation">Nombre de citation(s) souhaitée(s) :</label>
+                                <select name="nbCitation" id="nbCitation" class="select">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="column is-one-fifths">
+                        <button type="button" class="generate button is-danger is-medium" id="bouton">Lancer le générateur</button>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <div class="columns">
+                    <div class="column">
+                        <ul id="result">
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <div class=" has-text-centered">
+                <p>Copyright &copy; 2018 - Générateur Triste et Comique. Site développé par
+                    <a href="mailto:contact@nicolasturlet.fr">Nicolas Turlet</a>.</p>
+            </div>
+        </footer>
+        <!-- ci-après le code Javascript -->
+        <script src="../js/generatorInterface.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    </div>
+</body>
+
+
+</html>
